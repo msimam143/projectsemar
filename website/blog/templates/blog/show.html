@@ -1,0 +1,40 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <br>
+    <div class="text-center">
+        <h1>{{halaman}}</h1>
+    </div>
+    <br>
+    <div class="card-group">
+        <div class="card">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{data.judul}}</h5>
+                <p class="card-text">{{data.isi}}</p>
+                <p class="card-text"><small class="text-muted">updated at {{data.tanggal}} - {{data.kategori}}</small></p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header">Tinggalkan Komentar</div>
+        <div class="card-body">
+            <form method="POST" action="{% url 'blog:show' data.slug %}">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    {{formnya.email}}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">komen</label>
+                    {{formnya.isi}}
+                    <input type="hidden" name="kode" value="{{data.id}}">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button"class="btn btn-denger" onclick="history.go(-1)">Kembali</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
