@@ -120,8 +120,8 @@ USE_TZ = True
 MATERIAL_ADMIN_SITE = {
     'HEADER':  'mywebsite',  # Admin site header
     'TITLE':  'mywebsite',  # Admin site title
-    'MAIN_BG_COLOR':  ' #3F555C ',  # Admin site main color, css color should be specified
-    'MAIN_HOVER_COLOR':  '#7EC77B',  # Admin site main hover color, css color should be specified
+    'MAIN_BG_COLOR':  ' #000000 ',  # Admin site main color, css color should be specified
+    'MAIN_HOVER_COLOR':  '#00CED1',  # Admin site main hover color, css color should be specified
     
 }
 
